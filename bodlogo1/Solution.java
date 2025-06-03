@@ -19,7 +19,6 @@ class Result {
 
     public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
     // Write your code here
-        // Step 1: Create a list of unique scores in descending order
     List<Integer> uniqueRanked = new ArrayList<>();
     uniqueRanked.add(ranked.get(0));
     for (int i = 1; i < ranked.size(); i++) {
@@ -31,7 +30,6 @@ class Result {
     List<Integer> result = new ArrayList<>();
     int index = uniqueRanked.size() - 1;
 
-    // Step 2: Go through each player's score
     for (int score : player) {
         // Move up while player's score is >= ranked score
         while (index >= 0 && score >= uniqueRanked.get(index)) {

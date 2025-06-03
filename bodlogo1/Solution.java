@@ -1,24 +1,46 @@
-package bodlogo40.bodlogo1;
-
 import java.io.*;
+import java.math.*;
+import java.security.*;
+import java.text.*;
 import java.util.*;
+import java.util.concurrent.*;
+import java.util.regex.*;
 
 class Result {
 
     /*
-     * Complete the 'simpleArraySum' function below.
+     * Complete the 'climbingLeaderboard' function below.
      *
-     * The function is expected to return an INTEGER.
-     * The function accepts INTEGER_ARRAY ar as parameter.
+     * The function is expected to return an INTEGER_ARRAY.
+     * The function accepts following parameters:
+     *  1. INTEGER_ARRAY ranked
+     *  2. INTEGER_ARRAY player
      */
 
-    public static int simpleArraySum(List<Integer> ar) {
+    public static List<Integer> climbingLeaderboard(List<Integer> ranked, List<Integer> player) {
     // Write your code here
-    int sum = 0;
-        for (int num : ar) {
-            sum += num;
+        // Step 1: Create a list of unique scores in descending order
+    List<Integer> uniqueRanked = new ArrayList<>();
+    uniqueRanked.add(ranked.get(0));
+    for (int i = 1; i < ranked.size(); i++) {
+        if (!ranked.get(i).equals(ranked.get(i - 1))) {
+            uniqueRanked.add(ranked.get(i));
         }
-        return sum;
+    }
+
+    List<Integer> result = new ArrayList<>();
+    int index = uniqueRanked.size() - 1;
+
+    // Step 2: Go through each player's score
+    for (int score : player) {
+        // Move up while player's score is >= ranked score
+        while (index >= 0 && score >= uniqueRanked.get(index)) {
+            index--;
+        }
+        result.add(index + 2); // +2 because rank starts at 1
+    }
+
+    return result;
 
     }
 
@@ -29,20 +51,38 @@ public class Solution {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        int arCount = Integer.parseInt(bufferedReader.readLine().trim());
+        int rankedCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        String[] arTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        String[] rankedTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
 
-        List<Integer> ar = new ArrayList<>();
+        List<Integer> ranked = new ArrayList<>();
 
-        for (int i = 0; i < arCount; i++) {
-            int arItem = Integer.parseInt(arTemp[i]);
-            ar.add(arItem);
+        for (int i = 0; i < rankedCount; i++) {
+            int rankedItem = Integer.parseInt(rankedTemp[i]);
+            ranked.add(rankedItem);
         }
 
-        int result = Result.simpleArraySum(ar);
+        int playerCount = Integer.parseInt(bufferedReader.readLine().trim());
 
-        bufferedWriter.write(String.valueOf(result));
+        String[] playerTemp = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+
+        List<Integer> player = new ArrayList<>();
+
+        for (int i = 0; i < playerCount; i++) {
+            int playerItem = Integer.parseInt(playerTemp[i]);
+            player.add(playerItem);
+        }
+
+        List<Integer> result = Result.climbingLeaderboard(ranked, player);
+
+        for (int i = 0; i < result.size(); i++) {
+            bufferedWriter.write(String.valueOf(result.get(i)));
+
+            if (i != result.size() - 1) {
+                bufferedWriter.write("\n");
+            }
+        }
+
         bufferedWriter.newLine();
 
         bufferedReader.close();

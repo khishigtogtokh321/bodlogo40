@@ -54,5 +54,7 @@ public class Solution {
 Үр дүн:  
 ![Screenshot (350)](https://github.com/user-attachments/assets/0b1410d3-9c4b-4770-8f9b-30e8c851bcb1)
 
+Бодлогын холбоос: https://www.hackerrank.com/challenges/simple-array-sum/problem?isFullScreen=true
+
 
 

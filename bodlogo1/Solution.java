@@ -31,11 +31,10 @@ class Result {
     int index = uniqueRanked.size() - 1;
 
     for (int score : player) {
-        // Move up while player's score is >= ranked score
         while (index >= 0 && score >= uniqueRanked.get(index)) {
             index--;
         }
-        result.add(index + 2); // +2 because rank starts at 1
+        result.add(index + 2); 
     }
 
     return result;

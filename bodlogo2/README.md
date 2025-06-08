@@ -14,4 +14,9 @@
 Гаралт:
  - Хоёр бүхэл тоо бүхий массив/жагсаалт буцаана: [Алисын оноо, Бобын оноо]
 
+Үр дүн:
+
+ ![Screenshot (355)](https://github.com/user-attachments/assets/02844d00-ca9c-49fb-91ee-66983bd8a370)
+
+ Бодогын холбоос: https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true  
 

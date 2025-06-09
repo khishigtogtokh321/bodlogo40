@@ -1,4 +1,5 @@
-# waiter
+# lily
+
 
 ---Асуулт---"english" :
 Whenever George asks Lily to hang out, she's busy doing homework. George wants to help her finish it faster, but he's in over his head! Can you help George understand Lily's homework so she can hang out with him?

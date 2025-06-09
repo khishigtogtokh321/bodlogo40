@@ -1,6 +1,6 @@
 # min-loss
 
----Асуулт---"english" :
+# ---Асуулт---"english" :
 Lauren has a chart of distinct projected prices for a house over the next several years. She must buy the house in one year and sell it in another, and she must do so at a loss. She wants to minimize her financial loss.
 Example
 Her minimum loss is incurred by purchasing in year  at  and reselling in year  at . Return .
@@ -33,7 +33,7 @@ Sample Output 1
 Explanation 1
 Lauren buys the house in year  at  and sells it in year  at  for a minimal loss of .
 
----Асуулт---"Монголоор" :
+#---Асуулт---"Монголоор" :
 Лаурен ирэх хэдэн жилд орон сууцны үнийн төсөөллийг харуулсан хүснэгттэй. Тэр орон сууцыг нэг жилд худалдаж аваад, өөр жилд заавал алдагдалтайгаар зарах ёстой. Түүний зорилго бол хамгийн бага алдагдал хүлээх явдал юм.
 
 Жишээ:
@@ -80,7 +80,7 @@ int: Боломжит хамгийн бага алдагдлын хэмжээ
 Тайлбар 1:
 
 7₮-өөр авч, 5₮-өөр зарсан — хамгийн бага алдагдалтай хувилбар юм.
----Код---"java"
+#---Код---"java"
 
 import java.io.*;
 
@@ -154,7 +154,7 @@ public class Solution {
     }
 }
 
----Тайлбар--- ![Screenshot 2025-06-09 163038](https://github.com/user-attachments/assets/d70a9111-75e8-4ad1-bbc9-79153a90e7e3)
+#---Тайлбар--- ![Screenshot 2025-06-09 163038](https://github.com/user-attachments/assets/d70a9111-75e8-4ad1-bbc9-79153a90e7e3)
 Хувилбар үүсгэх:
 price нэртэй анхны үнийн жагсаалтыг хуулж, sorted нэртэй жагсаалтад хадгална. Дараа нь үүнийг өсөх дарааллаар эрэмбэлнэ.
 

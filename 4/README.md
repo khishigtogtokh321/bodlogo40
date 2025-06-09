@@ -202,6 +202,7 @@ vector<string> split(const string &str) {
 
     return tokens;
 }
-![min-penalty](https://github.com/user-attachments/assets/0ffa93df-596a-4f3c-af17-4a4e61bb2d3c)
+
 
 ---Тайлбар--- 
+![min-penalty](https://github.com/user-attachments/assets/0ffa93df-596a-4f3c-af17-4a4e61bb2d3c)

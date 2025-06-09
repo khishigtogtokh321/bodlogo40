@@ -43,7 +43,6 @@ public class Solution {
         BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
         String s = bufferedReader.readLine();
-
         String result = Result.encryption(s);
 
         bufferedWriter.write(result);

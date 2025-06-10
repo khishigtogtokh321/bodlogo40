@@ -1,4 +1,5 @@
-# waiter
+# Binary tree
+
 
 ---Асуулт---"english" :
 For the purposes of this challenge, we define a binary tree to be a binary search tree with the following ordering requirements:
